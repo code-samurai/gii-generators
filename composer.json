@@ -27,8 +27,7 @@
   },
   "autoload": {
     "psr-4": {
-      "blitzbrands\\cron\\": "src/",
-      "blitzbrands\\cron_tests\\": "tests/"
+      "blitzbrands\\gii\\generators\\": ""
     }
   }
 }
