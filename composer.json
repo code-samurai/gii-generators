@@ -1,0 +1,34 @@
+{
+  "name": "blitzbrands/gii-generators",
+  "description": "Custom gii generators using kartik-v widgets",
+  "minimum-stability": "dev",
+  "type": "yii2-module",
+  "keywords": [
+    "gii",
+    "generator",
+    "Yii2",
+    "Yii 2"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hamza Chouaibi",
+      "email": "hamza.chouaibi@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "yiisoft/yii2": "^2.0.6",
+    "yiisoft/yii2-bootstrap": "^2.0.5",
+    "kartik-v/yii2-grid": "^3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "blitzbrands\\cron\\": "src/",
+      "blitzbrands\\cron_tests\\": "tests/"
+    }
+  }
+}
