@@ -36,12 +36,12 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php if ($generator->indexWidgetType === 'grid'): ?>
     <?= "<?= " ?>GridView::widget([
         'dataProvider' => $dataProvider,
-        <?= $generator->enablePjax ? "'pjax=>true',\n" : '' ?>
+        <?= $generator->enablePjax ? "'pjax'=>true,\n" : '' ?>
     'toolbar' => [
         [
             'content' =>
                 Html::a('<i class="fa fa-plus"></i>', ['create'], [
-                    'title' => Yii::t('kvgrid', 'Add '<?= $generator->generateString(Inflector::singularize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>'),
+                    'title' => Yii::t('kvgrid', 'Add '. <?= $generator->generateString(Inflector::singularize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>),
                     'class' => 'btn btn-success'
                 ]) . ' ' .
                 Html::a('<i class="fa fa-repeat"></i>', ['index'], [
@@ -55,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'panel' => [
         'heading' => false,
         'type' => 'default',
-        'before' => Html::a('<i class="fa fa-plus"></i> Create Address', ['create'],
+        'before' => Html::a('<i class="fa fa-plus"></i> Create '.<?= $generator->generateString(Inflector::singularize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>, ['create'],
             ['class' => 'btn btn-success']),
         'after' => Html::a('<i class="fa fa-repeat"></i> Reset Grid', ['index'], ['class' => 'btn btn-info']),
 //            'footer' => false
